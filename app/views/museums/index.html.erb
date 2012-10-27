@@ -1,0 +1,17 @@
+<h1>Museums</h1>
+
+<% @museums.each do |museum| %>
+<div class="museum-listing">
+   <%= link_to image_tag(museum.photo), museum_path(museum) %>
+   <h2><%= museum.name %></h2>
+   <li><%= museum.address %></li>
+<%= link_to 'View Art', museum_path(museum) %> |
+<%= link_to 'Delete Museum', museum, method: :delete, data: { confirm: 'Are you sure?' } %>   
+</div>
+<% end %>
+
+<br />
+
+<div class="clear">
+<%= link_to 'New Museum', new_museum_path %>
+</div>

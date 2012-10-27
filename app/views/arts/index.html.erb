@@ -1,0 +1,23 @@
+<h1>Browse Art</h1>
+
+<% @arts.each do |art| %>
+  <div class="art-listing">
+    <%= image_tag(art.photo) %>
+    <h2><%= art.name %></h2>
+    <li>Style: <%= art.style %></li>
+    <li>Medium: <%= art.medium %></li>
+    <li>Created: <%= art.created_on %></li>
+    <li>Artist: <%= art.artist %></li>
+    <li>Museum: <%= art.museum.name %></li>
+    <li><%= link_to 'Show', art %>
+    <%= link_to 'Edit', edit_art_path(art) %>
+   </li>
+    </div>
+
+<% end %>
+
+<br />
+
+<div class="clear">
+<%= link_to 'New Art', new_art_path %>
+</div>

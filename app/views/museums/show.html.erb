@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= image_tag(@museum.photo) %>
+
+<h1><%= @museum.name %></h1>
+
+<p>
+  <%= @museum.address %>
+</p>
+
+<h3>Art in this museum</h3>
+
+<p>
+<%= @museum.art_id %>
+ <%@museum.arts.each do |s|%>
+ <div class="thumbnail">
+        <li><%= link_to(image_tag(s.photo), art_path(s))%></li>
+ </div>
+    <%end%>
+</ul>
+</p>
+
+<div class="clear">
+<%= link_to 'Edit Museum Listing', edit_museum_path(@museum) %> |
+<%= link_to 'View All Museums', museums_path %> |
+<%= link_to 'Delete This Museum', @museum, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

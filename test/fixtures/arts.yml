@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: arts
+#
+#  id         :integer          not null, primary key
+#  name       :string(255)
+#  style      :string(255)
+#  medium     :string(255)
+#  created_on :date
+#  artist     :string(255)
+#  photo      :string(255)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  style: MyString
+  medium: MyString
+  created_on: 2012-10-17
+  artist: MyString
+  photo: MyString
+
+two:
+  name: MyString
+  style: MyString
+  medium: MyString
+  created_on: 2012-10-17
+  artist: MyString
+  photo: MyString
